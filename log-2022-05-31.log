@@ -1,0 +1,29 @@
+{
+  "timestamp" : "2022-05-31T11:48:48.440Z",
+  "level" : "INFO",
+  "thread" : "http-nio-8080-exec-5",
+  "logger" : "jsonLogger",
+  "message" : "hello info log",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-31T12:23:15.126Z",
+  "level" : "INFO",
+  "thread" : "http-nio-8080-exec-4",
+  "logger" : "jsonLogger",
+  "message" : "hello info log",
+  "context" : "default"
+}{
+  "timestamp" : "2022-05-31T12:51:03.479Z",
+  "level" : "INFO",
+  "thread" : "http-nio-8080-exec-8",
+  "logger" : "jsonLogger",
+  "message" : "hello info log",
+  "context" : "default"
+}{
+  "timestamp" : "2022-06-01T06:57:52.690Z",
+  "level" : "INFO",
+  "thread" : "Thread-4",
+  "logger" : "org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor",
+  "message" : "Shutting down ExecutorService 'applicationTaskExecutor'",
+  "context" : "default"
+}

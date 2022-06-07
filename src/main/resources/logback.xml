@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!--    <include resource="org/springframework/boot/logging/logback/console.xml"/>-->
+    <!--    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">-->
+    <!--        <encoder>-->
+    <!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}- %msg-->
+    <!--            </pattern>-->
+    <!--        </encoder>-->
+    <!--    </appender>-->
+    <!--    <appender name="fileout"-->
+    <!--              class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--        <File>./logs/orders.log</File>-->
+    <!--        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">-->
+    <!--&lt;!&ndash;            <maxIndex>8</maxIndex>&ndash;&gt;-->
+    <!--            <FileNamePattern>./logs/orders.log.%i-->
+    <!--            </FileNamePattern>-->
+    <!--        </rollingPolicy>-->
+    <!--        <triggeringPolicy-->
+    <!--                class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+    <!--            <MaxFileSize>128MB</MaxFileSize>-->
+    <!--        </triggeringPolicy>-->
+
+    <!--        <encoder class="net.logstash.logback.encoder.LogstashEncoder">-->
+    <!--            <providers>-->
+    <!--                <timestamp>-->
+    <!--                    <timeZone>EST</timeZone>-->
+    <!--                </timestamp>-->
+    <!--                <pattern>-->
+    <!--                    <pattern>-->
+    <!--                        {-->
+    <!--                        "level": "%level",-->
+    <!--                        "class": "%logger{40}",-->
+    <!--                        "message": "%message"-->
+    <!--                        }-->
+    <!--                    </pattern>-->
+    <!--                </pattern>-->
+    <!--&lt;!&ndash;                <stackTrace>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <maxDepthPerThrowable>30</maxDepthPerThrowable>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <maxLength>2048</maxLength>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <shortenedClassNameLength>20</shortenedClassNameLength>&ndash;&gt;-->
+    <!--&lt;!&ndash;                        <rootCauseFirst>true</rootCauseFirst>&ndash;&gt;-->
+    <!--&lt;!&ndash;                    </throwableConverter>&ndash;&gt;-->
+    <!--&lt;!&ndash;                </stackTrace>&ndash;&gt;-->
+    <!--            </providers>-->
+    <!--        </encoder>-->
+    <!--    </appender>-->
+    <!--    <root level="info">-->
+    <!--        <appender-ref ref="fileout" />-->
+    <!--        <appender-ref ref="stdout" />-->
+    <!--    </root>-->
+
+    <!--    <appender name="json" class="ch.qos.logback.core.ConsoleAppender">-->
+    <!--        <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">-->
+    <!--            <jsonFormatter-->
+    <!--                    class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">-->
+    <!--                <prettyPrint>true</prettyPrint>-->
+    <!--            </jsonFormatter>-->
+    <!--            <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>-->
+    <!--        </layout>-->
+    <!--    </appender>-->
+
+    <!--    <logger name="jsonLogger" level="TRACE">-->
+    <!--        <appender-ref ref="json" />-->
+    <!--    </logger>-->
+
+
+<!--    working configuration starts from here-->
+
+<!--    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
+<!--            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">-->
+<!--                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>-->
+<!--                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>-->
+
+<!--                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">-->
+<!--                    <prettyPrint>true</prettyPrint>-->
+<!--                </jsonFormatter>-->
+<!--            </layout>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>log-%d{yyyy-MM-dd}.log</fileNamePattern>-->
+<!--            <maxHistory>30</maxHistory>-->
+<!--            <totalSizeCap>3GB</totalSizeCap>-->
+<!--        </rollingPolicy>-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <maxFileSize>3MB</maxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
+<!--            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">-->
+<!--                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>-->
+<!--                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>-->
+
+<!--                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">-->
+<!--                    <prettyPrint>true</prettyPrint>-->
+<!--                </jsonFormatter>-->
+<!--            </layout>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    <root level="info">-->
+<!--        <appender-ref ref="stdout"/>-->
+<!--        <appender-ref ref="rollingFile"/>-->
+<!--    </root>-->
+
+
+    <!--    working configuration Ends here-->
+
+
+<!--    <appender name="logStash"  class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+<!--        <destination>172.28.40.5:8089</destination>-->
+<!--        <encoder class="net.logstash.logback.encoder.LogstashEncoder" >-->
+<!--            <customFields>{"application":"far"}</customFields>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+
+<!--    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - -->
+<!--                %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
+<!--            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">-->
+<!--                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>-->
+<!--                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>-->
+
+<!--                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">-->
+<!--                    <prettyPrint>true</prettyPrint>-->
+<!--                </jsonFormatter>-->
+<!--            </layout>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="logStash" />-->
+<!--&lt;!&ndash;        <appender-ref ref="console" />&ndash;&gt;-->
+<!--    </root>-->
+
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+                <timestampFormat>yyyy-MM-dd'T'HH:mm:ss.SSSX</timestampFormat>
+                <timestampFormatTimezoneId>Etc/UTC</timestampFormatTimezoneId>
+
+                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                    <prettyPrint>true</prettyPrint>
+                </jsonFormatter>
+            </layout>
+        </encoder>
+    </appender>
+
+<!--    <root level="info">-->
+<!--        <appender-ref ref="stdout"/>-->
+<!--    </root>-->
+
+<!--    <appender name="STASH" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        <file>logback/redditApp.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>logback/redditApp-saqib.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+<!--            <maxHistory>7</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>-->
+<!--    </appender>-->
+<!--    <root level="INFO">-->
+<!--        <appender-ref ref="STASH" />-->
+<!--    </root>-->
+
+    <appender name="ELASTIC" class="com.internetitem.logback.elasticsearch.ElasticsearchAppender">
+        <url>http://localhost:9200/_bulk</url>
+        <index>logs_micrometer-%date{yyyy-MM-dd}</index>
+        <type>tester</type>
+        <loggerName>es-logger</loggerName> <!-- optional -->
+        <errorLoggerName>es-error-logger</errorLoggerName> <!-- optional -->
+        <connectTimeout>30000</connectTimeout> <!-- optional (in ms, default 30000) -->
+        <errorsToStderr>false</errorsToStderr> <!-- optional (default false) -->
+        <includeCallerData>true</includeCallerData> <!-- optional (default false) -->
+        <logsToStderr>false</logsToStderr> <!-- optional (default false) -->
+        <maxQueueSize>104857600</maxQueueSize> <!-- optional (default 104857600) -->
+        <maxRetries>3</maxRetries> <!-- optional (default 3) -->
+        <readTimeout>30000</readTimeout> <!-- optional (in ms, default 30000) -->
+        <sleepTime>250</sleepTime> <!-- optional (in ms, default 250) -->
+        <rawJsonMessage>false</rawJsonMessage> <!-- optional (default false) -->
+        <includeMdc>false</includeMdc> <!-- optional (default false) -->
+        <maxMessageSize>1000</maxMessageSize> <!-- optional (default -1 -->
+        <authentication class="com.internetitem.logback.elasticsearch.config.BasicAuthentication" /> <!-- optional -->
+        <properties>
+            <property>
+                <name>host</name>
+                <value>${HOSTNAME}</value>
+                <allowEmpty>false</allowEmpty>
+            </property>
+            <property>
+                <name>severity</name>
+                <value>%level</value>
+            </property>
+            <property>
+                <name>thread</name>
+                <value>%thread</value>
+            </property>
+            <property>
+                <name>stacktrace</name>
+                <value>%ex</value>
+            </property>
+            <property>
+                <name>logger</name>
+                <value>%logger</value>
+            </property>
+            <property>
+                <name>traceId</name>
+                <value>%X{traceId:-}</value>
+            </property>
+            <property>
+                <name>spanId</name>
+                <value>%X{spanId:-}</value>
+            </property>
+        </properties>
+        <headers>
+            <header>
+                <name>Content-Type</name>
+                <value>application/json</value>
+            </header>
+        </headers>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="ELASTIC" />
+        <appender-ref ref="stdout" />
+    </root>
+
+
+
+
+
+
+
+</configuration>
